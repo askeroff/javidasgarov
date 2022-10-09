@@ -1,5 +1,8 @@
 import * as React from 'react';
+
 import Header from '../header/Header';
+
+import './layout.css';
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
