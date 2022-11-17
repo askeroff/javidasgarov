@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
+import { StaticImage } from 'gatsby-plugin-image';
+
 import Container from '../layout/Container';
 
 const Menu = styled.ul`
@@ -34,10 +36,11 @@ const HeroWrapper = styled.div`
   padding-top: 75px;
   padding-bottom: 276px;
 
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
 
   h1 {
     font-size: 48px;
+    font-family: 'Poppins', sans-serif;
   }
 `;
 
@@ -45,20 +48,25 @@ const HeroSubElement = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
-  max-width: 400px;
-  background: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  padding: 30px 50px;
+  width: 100%;
+  background: #ffffff;
+  margin-top: -200px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  
+
   h2 {
-    color: #02066F;
+    color: #02066f;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'Poppins', sans-serif;
     line-height: 72px;
   }
-  
+
   img {
-    width: 520px;
+    max-width: 520px;
+    height: auto;
   }
 `;
 
@@ -80,7 +88,7 @@ function Header() {
         <HeroSubElement>
           <h2>Here to help you with web development</h2>
 
-          <img src="assets/images/js_hero.png" alt="" />
+          <StaticImage src="../../assets/images/js_hero.png" alt="js alt" />
         </HeroSubElement>
       </Container>
     </header>
