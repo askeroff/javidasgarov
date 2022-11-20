@@ -1,95 +1,40 @@
 import * as React from 'react';
-import styled from 'styled-components';
 
 import { StaticImage } from 'gatsby-plugin-image';
 
 import Container from '../layout/Container';
 
-const Menu = styled.ul`
-  height: 100px;
-  width: 100%;
-  list-style: none;
-  display: flex;
-  align-items: center;
-`;
-
-const MenuLink = styled.li`
-  font-family: 'Raleway', sans-serif;
-  color: var(--main-color);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
-  display: inline-flex;
-
-  & + & {
-    margin-left: 18px;
-  }
-`;
-
-const HeroWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--bg-primary);
-  color: #fff;
-  padding-top: 75px;
-  padding-bottom: 276px;
-
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
-
-  h1 {
-    font-size: 48px;
-    font-family: 'Poppins', sans-serif;
-  }
-`;
-
-const HeroSubElement = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  z-index: 2;
-  padding: 30px 50px;
-  width: 100%;
-  background: #ffffff;
-  margin-top: -200px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
-  h2 {
-    color: #02066f;
-    font-weight: 700;
-    font-size: 48px;
-    font-family: 'Poppins', sans-serif;
-    line-height: 72px;
-  }
-
-  img {
-    max-width: 520px;
-    height: auto;
-  }
-`;
+import * as HeaderCSS from './Header.module.css';
 
 function Header() {
   return (
     <header>
       <Container>
-        <Menu>
-          <MenuLink>Home</MenuLink>
-          <MenuLink>About</MenuLink>
-        </Menu>
+        <ul className={HeaderCSS.menu}>
+          <li className={HeaderCSS.menuLink}>Home</li>
+          <li className={HeaderCSS.menuLink}>About</li>
+        </ul>
       </Container>
 
-      <HeroWrapper>
+      <div className={HeaderCSS.heroWrapper}>
         <h1>Javid Asgarov</h1>
-      </HeroWrapper>
+      </div>
 
       <Container>
-        <HeroSubElement>
+        <div className={HeaderCSS.heroSub}>
           <h2>Here to help you with web development</h2>
 
-          <StaticImage src="../../assets/images/js_hero.png" alt="js alt" />
-        </HeroSubElement>
+          <StaticImage
+            style={{
+              gridArea: '1/1',
+              maxWidth: '420px',
+              // You can set a maximum height for the image, if you wish.
+              // maxHeight: 600,
+            }}
+            src="../../assets/images/js_hero.png"
+            alt="js alt"
+          />
+        </div>
       </Container>
     </header>
   );
