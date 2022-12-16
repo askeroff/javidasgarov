@@ -1,8 +1,14 @@
+.youtube-relative-wrapper {
+    position: relative;
+    margin-bottom: 60px;
+}
+
 .youtube-wrapper {
     background: var(--bg-primary);
-    clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    /*clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);*/
     padding: 60px 60px 160px;
-    margin-bottom: 100px;
 }
 
 .landing-block-description {

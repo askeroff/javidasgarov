@@ -8,3 +8,5 @@ const LandingTitle = styled.h1`
 `;
 
 export default LandingTitle;
+
+// https://lukaszadam.com/illustrations/?ref=uigoodies.com

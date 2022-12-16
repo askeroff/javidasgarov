@@ -1,0 +1,27 @@
+.wrapper {
+    background: var(--bg-primary);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    padding: 166px 60px 160px;
+    margin-bottom: 100px;
+}
+
+.links {
+    list-style: none;
+}
+
+.links li {
+    display: block;
+}
+
+.links li + li {
+    margin-top: 20px;
+}
+
+.links a {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #fff;
+    text-decoration: none;
+}

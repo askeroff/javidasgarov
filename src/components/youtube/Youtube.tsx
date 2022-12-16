@@ -9,30 +9,35 @@ import * as YoutubeCSS from './Youtube.module.css';
 
 function Youtube() {
   return (
-    <div className={YoutubeCSS.youtubeWrapper}>
-      <Container>
-        <CenteredFlex justifyContent="space-between">
-          <div>
-            <LandingTitle>Hello youtube</LandingTitle>
-            <div className="landing-block-description">
-              Check out my youtube channel. I post lessons on Angular, React,
-              testing code and other stuff that might help you width web
-              development!
+    <div className={YoutubeCSS.youtubeRelativeWrapper}>
+      <StaticImage
+        style={{
+          gridArea: '1/1',
+          maxWidth: '420px',
+          position: 'absolute',
+          right: '70px',
+          bottom: '170px',
+          zIndex: '2',
+          // You can set a maximum height for the image, if you wish.
+          // maxHeight: 600,
+        }}
+        src="../../assets/images/youtube_illustration.svg"
+        alt="js alt"
+      />
+      <div className={YoutubeCSS.youtubeWrapper}>
+        <Container>
+          <CenteredFlex justifyContent="space-between">
+            <div>
+              <LandingTitle>Hello youtube</LandingTitle>
+              <div className={YoutubeCSS.landingBlockDescription}>
+                Check out my youtube channel. I post lessons on Angular, React,
+                testing code and other stuff that might help you with web
+                development!
+              </div>
             </div>
-          </div>
-
-          <StaticImage
-            style={{
-              gridArea: '1/1',
-              maxWidth: '420px',
-              // You can set a maximum height for the image, if you wish.
-              // maxHeight: 600,
-            }}
-            src="../../assets/images/youtube.png"
-            alt="js alt"
-          />
-        </CenteredFlex>
-      </Container>
+          </CenteredFlex>
+        </Container>
+      </div>
     </div>
   );
 }

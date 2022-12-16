@@ -29,7 +29,10 @@
     padding-top: 75px;
     padding-bottom: 276px;
 
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
+    /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);*/
+
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 
 .hero-wrapper h1 {
